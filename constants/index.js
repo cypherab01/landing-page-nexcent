@@ -9,7 +9,7 @@ export const CLIENT5 = "/assets/clients/5.png";
 export const CLIENT6 = "/assets/clients/6.png";
 export const CLIENT7 = "/assets/clients/7.png";
 
-export const MEMBERSHIP = "/assets/membership-organizations.png";
+export const MEMBERSHIP = "/assets/membership-organization.png";
 export const NATIONAL_ASSOCIATIONS = "/assets/national-associations.png";
 export const CLUBS_AND_GROUPS = "/assets/clubs.png";
 

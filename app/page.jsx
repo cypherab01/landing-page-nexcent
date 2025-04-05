@@ -10,7 +10,9 @@ export default function Home() {
     <>
       {/* main body container */}
       <div className="flex flex-col items-center justify-center w-screen hero bg-silver p-4 md:p-2 lg:p-0">
-        <Header />
+        <div className="container">
+          <Header />
+        </div>
         <main className="container h-[calc(100vh-80px)]">
           <HeroBanner />
           <OurClients />
@@ -18,7 +20,7 @@ export default function Home() {
           <LearnMore />
           <LocalBusiness />
           <Pana />
-          <div className="min-h-[40vh] relative"></div>
+          <div className="min-h-[50vh] relative"></div>
         </main>
       </div>
     </>

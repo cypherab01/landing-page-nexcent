@@ -5,7 +5,7 @@ import { MOBILE_LOGIN } from "@/constants";
 const LearnMore = () => {
   return (
     <section className="my-16">
-      <div className="container mx-auto">
+      <div className="mx-auto">
         <div className="flex items-center justify-around flex-col md:flex-row gap-8">
           <div className="w-full md:w-2/5">
             <Image
