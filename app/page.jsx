@@ -5,24 +5,23 @@ import Community from "@/components/Community";
 import LearnMore from "@/components/LearnMore";
 import LocalBusiness from "@/components/LocalBusiness";
 import Pana from "@/components/Pana";
+
 export default function Home() {
   return (
     <>
-      {/* main body container */}
-      <div className="flex flex-col items-center justify-center w-screen hero bg-silver p-4 md:p-2 lg:p-0">
-        <div className="container">
-          <Header />
-        </div>
-        <main className="container h-[calc(100vh-80px)]">
-          <HeroBanner />
+      <div className="bg-silver">
+        <Header />
+        <HeroBanner />
+      </div>
+      <main className="container mx-auto">
+        <div className="">
           <OurClients />
           <Community />
           <LearnMore />
           <LocalBusiness />
           <Pana />
-          <div className="min-h-[50vh] relative"></div>
-        </main>
-      </div>
+        </div>
+      </main>
     </>
   );
 }

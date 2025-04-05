@@ -3,7 +3,12 @@ import { cn } from "@/lib/utils";
 
 const Typography = {
   h1: ({ children, className }) => (
-    <h1 className={cn("text-[68px] font-semibold leading-[78px]", className)}>
+    <h1
+      className={cn(
+        "text-[40px] md:text-[68px] font-semibold leading-[50px] md:leading-[78px]",
+        className
+      )}
+    >
       {children}
     </h1>
   ),

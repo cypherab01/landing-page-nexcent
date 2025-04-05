@@ -7,7 +7,7 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 const Header = () => {
   return (
-    <header className="w-full relative h-[60px] flex items-center justify-between bg-color-primary">
+    <header className="container mx-auto py-12 flex items-center justify-between px-4 md:px-0">
       <Image src={LOGO} alt="Nexcent Logo" width={155} height={24} />
 
       <nav className="hidden lg:flex">

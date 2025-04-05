@@ -12,7 +12,7 @@ import {
 
 const OurClients = () => {
   return (
-    <section className="my-12">
+    <section className="py-12">
       <Typography.h2 className="text-center mb-4">Our Clients</Typography.h2>
       <Typography.body2 className="text-center mb-4">
         We have been working with some Fortune 500+ clients

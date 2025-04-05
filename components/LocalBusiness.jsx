@@ -4,8 +4,8 @@ import { MEMBERS, CLUBS, EVENTS_BOOKING, PAYMENT } from "@/constants";
 
 const LocalBusiness = () => {
   return (
-    <section className="py-16">
-      <div className="flex flex-col md:flex-row items-center justify-start">
+    <section className="py-12">
+      <div className="flex flex-col md:flex-row items-center justify-around">
         <div className="w-full md:w-1/2">
           <Typography.h2 className="mb-4">
             <div className="max-w-[14ch]">Helping a local</div>
