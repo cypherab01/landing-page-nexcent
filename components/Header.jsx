@@ -1,26 +1,40 @@
+"use client";
+
 import Image from "next/image";
 import { LOGO } from "@/constants";
-import { navbar } from "@/config/links";
+import { links } from "@/config/links";
 import Link from "next/link";
-
+import { cn } from "@/lib/utils";
 const Header = () => {
   return (
     <header className="container relative h-[60px] flex items-center justify-between bg-color-primary">
       <Image src={LOGO} alt="Nexcent Logo" width={155} height={24} />
 
-      <nav>
+      <nav className="hidden lg:flex">
         <ul className="flex items-center justify-center gap-8">
-          {navbar.navLinks.map((link) => (
-            <li key={link.name}>{link.name}</li>
+          {links.navLinks.map((link) => (
+            <li key={link.name}>
+              <Link
+                href={link.href}
+                className={cn("text-base hover:text-primary hover:font-medium")}
+              >
+                {link.name}
+              </Link>
+            </li>
           ))}
         </ul>
       </nav>
 
-      <div className="flex items-center justify-center gap-4 text-lg ring-2">
-        {navbar.actions.map((action) => (
+      <div className="flex items-center justify-center gap-4">
+        {links.actions.map((action) => (
           <Link
             href={action.href}
-            className={`${action.variant === "primary" ? "bg-primary" : ""}`}
+            className={cn(
+              "text-primary font-sm px-4 py-2 rounded-md",
+              action.variant === "primary" && "bg-primary text-silver",
+              action.variant !== "primary" &&
+                "hover:underline hover:underline-offset-4"
+            )}
             key={action.name}
           >
             {action.name}

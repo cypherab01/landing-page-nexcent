@@ -36,7 +36,7 @@ const Typography = {
   body2: ({ children, weight = "default", className }) => (
     <p
       className={cn(
-        "text-[16px] leading-[24px]",
+        "text-[16px] leading-[24px] text-gray",
         weight === "md" && "font-medium",
         className
       )}
