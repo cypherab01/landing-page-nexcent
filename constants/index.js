@@ -8,3 +8,16 @@ export const CLIENT4 = "/assets/clients/4.png";
 export const CLIENT5 = "/assets/clients/5.png";
 export const CLIENT6 = "/assets/clients/6.png";
 export const CLIENT7 = "/assets/clients/7.png";
+
+export const MEMBERSHIP = "/assets/membership-organizations.png";
+export const NATIONAL_ASSOCIATIONS = "/assets/national-associations.png";
+export const CLUBS_AND_GROUPS = "/assets/clubs.png";
+
+export const MOBILE_LOGIN = "/assets/mobile-login.png";
+
+export const MEMBERS = "/assets/members.png";
+export const CLUBS = "/assets/clubs.png";
+export const EVENTS_BOOKING = "/assets/events.png";
+export const PAYMENT = "/assets/payment.png";
+
+export const PANA = "/assets/pana.png";

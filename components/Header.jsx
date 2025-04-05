@@ -16,7 +16,9 @@ const Header = () => {
             <li key={link.name}>
               <Link
                 href={link.href}
-                className={cn("text-base hover:text-primary hover:font-medium")}
+                className={cn(
+                  "text-base hover:text-primary hover:font-medium hover:underline hover:underline-offset-4"
+                )}
               >
                 {link.name}
               </Link>
@@ -30,8 +32,9 @@ const Header = () => {
           <Link
             href={action.href}
             className={cn(
-              "text-primary font-sm px-4 py-2 rounded-md",
-              action.variant === "primary" && "bg-primary text-silver",
+              "text-primary font-sm px-4 py-1 rounded-md",
+              action.variant === "primary" &&
+                "bg-primary text-silver hover:bg-primary/80",
               action.variant !== "primary" &&
                 "hover:underline hover:underline-offset-4"
             )}
