@@ -1,37 +1,76 @@
-import React from "react";
-import { cn } from "@/lib/utils";
+"use client";
+
+import React, { useState } from "react";
 
 const Button = ({
-  children,
+  label,
+  size = "normal",
   variant = "primary",
-  size = "default",
-  className,
-  ...props
+  iconLeft,
+  iconRight,
+  isLoading,
+  disabled,
+  onClick,
 }) => {
-  const baseStyles =
-    "inline-flex items-center justify-center rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50";
+  const [isHovered, setIsHovered] = useState(false);
+  const [isFocused, setIsFocused] = useState(false);
+  const [isClicked, setIsClicked] = useState(false);
 
-  const variants = {
-    primary: "bg-primary text-white hover:bg-primary/90",
-    secondary: "bg-secondary text-white hover:bg-secondary/90",
-    outline:
-      "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
-    ghost: "hover:bg-accent hover:text-accent-foreground",
-    link: "text-primary underline-offset-4 hover:underline",
+  const baseStyles =
+    "rounded-[4px] flex items-center justify-center transition-all duration-200";
+  const sizeStyles = {
+    normal: "px-4 py-2 text-base",
+    medium: "px-4 py-2 text-base",
+    small: "px-3 py-2 text-sm",
+  };
+  const variantStyles = {
+    primary: {
+      default: "bg-primary text-background font-lg",
+      hover: "bg-primary-dark text-background",
+      focus: "bg-primary border-2 border-d-gray text-background",
+      click: "bg-primary-shade-200 text-background",
+      disabled: "bg-silver text-gray-blue",
+    },
+    secondary: {
+      default: "bg-secondary text-primary",
+      hover: "bg-secondary-dark text-primary",
+      focus: "bg-secondary ring-2 ring-secondary-light text-primary",
+      click: "bg-secondary-darker text-primary",
+    },
+    tertiary: {
+      default: "bg-transparent text-primary border border-primary",
+      hover: "bg-primary-light text-primary border border-primary",
+      focus:
+        "bg-transparent ring-2 ring-primary-light text-primary border border-primary",
+      click: "bg-primary-light text-primary-dark border border-primary",
+    },
+    disabled: "bg-gray-300 text-gray-500 cursor-not-allowed",
   };
 
-  const sizes = {
-    sm: "h-8 px-3 text-sm",
-    md: "h-10 px-4",
-    default: "h-12 px-6 text-lg",
+  const getVariantStyle = () => {
+    if (disabled) return variantStyles.disabled;
+    if (isClicked) return variantStyles[variant].click;
+    if (isFocused) return variantStyles[variant].focus;
+    if (isHovered) return variantStyles[variant].hover;
+    return variantStyles[variant].default;
   };
 
   return (
     <button
-      className={cn(baseStyles, variants[variant], sizes[size], className)}
-      {...props}
+      className={`${baseStyles} ${sizeStyles[size]} ${getVariantStyle()}`}
+      disabled={disabled}
+      onClick={onClick}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      onFocus={() => setIsFocused(true)}
+      onBlur={() => setIsFocused(false)}
+      onMouseDown={() => setIsClicked(true)}
+      onMouseUp={() => setIsClicked(false)}
     >
-      {children}
+      {isLoading && <span className="mr-2 loader" />}
+      {iconLeft && <span className="mr-2">{iconLeft}</span>}
+      {label}
+      {iconRight && <span className="ml-2">{iconRight}</span>}
     </button>
   );
 };

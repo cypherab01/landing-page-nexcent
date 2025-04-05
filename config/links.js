@@ -33,6 +33,7 @@ export const navbar = {
     {
       name: "Sign Up",
       href: "/signup",
+      variant: "primary",
     },
   ],
 };

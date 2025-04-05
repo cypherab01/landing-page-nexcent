@@ -35,7 +35,7 @@
 
 :root {
   /* Base colors */
-  --color-primary: #28cb8b;
+  --color-primary: #28CB8B;
   --color-secondary: #263238;
   --color-info: #2194f3;
 
@@ -70,5 +70,5 @@
 }
 
 body {
-  @apply antialiased bg-background text-foreground flex justify-center w-screen;
+  @apply flex justify-center w-screen text-lg antialiased bg-background text-foreground;
 }
