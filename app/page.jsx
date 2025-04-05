@@ -13,15 +13,17 @@ export default function Home() {
         <Header />
         <HeroBanner />
       </div>
-      <main className="container mx-auto">
-        <div className="">
-          <OurClients />
-          <Community />
-          <LearnMore />
-          <LocalBusiness />
-          <Pana />
-        </div>
-      </main>
+      <div>
+        <main className="container mx-auto">
+          <div className="">
+            <OurClients />
+            <Community />
+            <LearnMore />
+            <LocalBusiness />
+            <Pana />
+          </div>
+        </main>
+      </div>
     </>
   );
 }

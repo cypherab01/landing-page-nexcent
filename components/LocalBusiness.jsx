@@ -5,8 +5,8 @@ import { MEMBERS, CLUBS, EVENTS_BOOKING, PAYMENT } from "@/constants";
 const LocalBusiness = () => {
   return (
     <section className="py-12">
-      <div className="flex flex-col md:flex-row items-center justify-around">
-        <div className="w-full md:w-1/2">
+      <div className="flex flex-col md:flex-row items-center justify-center gap-8">
+        <div className="w-full md:w-1/2 px-8">
           <Typography.h2 className="mb-4">
             <div className="max-w-[14ch]">Helping a local</div>
             <span className="text-primary">business reinvent itself</span>
@@ -15,7 +15,7 @@ const LocalBusiness = () => {
             We reached here with our hard work and dedication
           </Typography.body2>
         </div>
-        <div className="w-full md:w-1/2">
+        <div className="w-full md:w-1/2 px-8">
           <div className="card-container grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-4">
             <div className="card flex items-center gap-4">
               <Image src={MEMBERS} alt="members" width={45} height={45} />

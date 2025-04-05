@@ -70,5 +70,5 @@
 }
 
 body {
-  @apply flex justify-center w-screen text-lg antialiased bg-background text-foreground;
+  @apply antialiased bg-background text-foreground;
 }
